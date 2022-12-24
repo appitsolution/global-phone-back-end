@@ -9,5 +9,7 @@ const {
 
 router.get("/get", allOrders);
 router.get("/one/:id", oneOrder);
-router.posh("/add", addOrder);
+router.post("/add", addOrder);
 router.post("/delete", deleteOrder);
+
+module.exports = router;
