@@ -2,18 +2,23 @@ const express = require("express");
 const payload = require("payload");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
 require("dotenv").config();
 const app = express();
 
+mongoose.connect(process.env.MONGODB_BACK_URI).then(() => {
+  console.log("connect db");
+});
+
 const { user, order } = require("./router");
 
-// Redirect root to Admin panel
 app.use(cors());
 app.use(bodyParser.json());
 
 app.use("/user", user);
 app.use("/order", order);
 
+// Redirect root to Admin panel
 app.get("/", (_, res) => {
   res.redirect("/admin");
 });
@@ -27,7 +32,5 @@ payload.init({
     payload.logger.info(`Payload Admin URL: ${payload.getAdminURL()}`);
   },
 });
-
-// Add your own express routes here
 
 app.listen(3000);
