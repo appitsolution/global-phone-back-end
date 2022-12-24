@@ -5,13 +5,14 @@ const bodyParser = require("body-parser");
 require("dotenv").config();
 const app = express();
 
-const { user } = require("./router");
+const { user, order } = require("./router");
 
 // Redirect root to Admin panel
 app.use(cors());
 app.use(bodyParser.json());
 
 app.use("/user", user);
+app.use("/order", order);
 
 app.get("/", (_, res) => {
   res.redirect("/admin");
