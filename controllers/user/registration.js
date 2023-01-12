@@ -2,7 +2,8 @@ const SchemaUser = require("../../db/SchemaUser");
 const bcrypt = require("bcryptjs");
 
 const registration = async (req, res) => {
-  const { email, password } = req.body;
+  const { firstName, lastName, email, password } = req.body;
+
   try {
     const check = await SchemaUser.find({ email });
     if (check.length > 0) {
@@ -11,7 +12,10 @@ const registration = async (req, res) => {
         code: 409,
       });
     }
+
     const result = await SchemaUser.create({
+      firstName,
+      lastName,
       email: email,
       password: bcrypt.hashSync(password),
     });
