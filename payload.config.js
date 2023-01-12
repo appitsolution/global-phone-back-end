@@ -5,7 +5,7 @@ import Price from "./collections/Price";
 import Users from "./collections/Users";
 
 export default buildConfig({
-  serverURL: "http://localhost:3000",
+  serverURL: "https://global-phone.onrender.com",
   admin: {
     user: Users.slug,
   },
