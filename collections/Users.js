@@ -1,8 +1,8 @@
 const Users = {
-  slug: 'users',
+  slug: "users",
   auth: true,
   admin: {
-    useAsTitle: 'email',
+    useAsTitle: "email",
   },
   access: {
     read: () => true,
