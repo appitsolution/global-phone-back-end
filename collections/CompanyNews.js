@@ -9,7 +9,11 @@ const NewsCompany = {
       type: "text",
       required: true,
     },
-    { name: "desc", type: "textarea" },
+    {
+      name: "desc",
+      type: "textarea",
+      required: true,
+    },
     {
       name: "img",
       type: "upload",
@@ -24,7 +28,10 @@ const NewsCompany = {
           name: "title",
           type: "text",
         },
-        { name: "text", type: "textarea" },
+        {
+          name: "text",
+          type: "textarea",
+        },
       ],
     },
   ],

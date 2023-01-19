@@ -1,19 +1,14 @@
-import payload from "payload";
-import { generateID } from "../utils/generateID";
-
-const CollectionsPhone = {
-  slug: "collections-phone",
+const CollectionsWatch = {
+  slug: "collections-watch",
   access: {
     read: () => true,
   },
-  admin: {
-    useAsTitle: "model",
-  },
   fields: [
     {
-      name: "brand",
-      type: "relationship",
-      relationTo: "brand-phones",
+      name: "brand", // required
+      type: "relationship", // required
+      relationTo: "brand-watch", // required
+      required: true,
     },
     {
       name: "image",
@@ -55,4 +50,4 @@ const CollectionsPhone = {
     },
   ],
 };
-export default CollectionsPhone;
+export default CollectionsWatch;

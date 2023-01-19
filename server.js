@@ -10,13 +10,14 @@ mongoose.connect(process.env.MONGODB_BACK_URI).then(() => {
   console.log("connect db");
 });
 
-const { user, order } = require("./router");
+const { user, order, basket } = require("./router");
 
 app.use(cors());
 app.use(bodyParser.json());
 
 app.use("/user", user);
 app.use("/order", order);
+app.use("/basket", basket);
 
 // Redirect root to Admin panel
 app.get("/", (_, res) => {

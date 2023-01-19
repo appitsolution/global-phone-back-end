@@ -42,7 +42,12 @@ const userSchema = Schema({
     },
   },
   basket: {
-    type: Array,
+    basketList: {
+      type: Array,
+    },
+    totalPrice: {
+      type: Number,
+    },
   },
   payment: {
     selectPay: {
@@ -66,20 +71,14 @@ const userSchema = Schema({
     {
       id: Schema.ObjectId,
       date: { type: Date },
-      priceDelivery: { type: String },
       transfer: { type: String },
-      pay: { type: String },
+      payment: { type: String },
       status: { type: String },
       statusOffer: { type: Number },
-      products: [
-        {
-          title: { type: String },
-          storage: { type: String },
-          type: { type: String },
-          color: { type: String },
-          price: { type: String },
-        },
-      ],
+      products: {
+        type: Array,
+      },
+      priceDelivery: { type: String },
     },
   ],
 });
