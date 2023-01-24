@@ -17,6 +17,7 @@ const verify = async (req, res, next) => {
 
       return;
     }
+
     res.status(403).json({
       status: "error",
       code: 403,

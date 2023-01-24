@@ -41,9 +41,28 @@ const OrdersUser = {
       required: true,
     },
     {
-      name: "payment",
+      name: "paymentSelect",
       type: "text",
       required: true,
+    },
+    {
+      name: "authorPay",
+      type: "text",
+      required: true,
+    },
+    {
+      name: "iban",
+      type: "text",
+      required: true,
+    },
+    {
+      name: "nameBank",
+      type: "text",
+      required: true,
+    },
+    {
+      name: "paypalUrl",
+      type: "text",
     },
     {
       name: "status",
@@ -54,6 +73,10 @@ const OrdersUser = {
       name: "statusOffer",
       type: "number",
       required: true,
+      admin: {
+        description:
+          "1 - Передано в службу доставки, 2 - Прийнято на діагностику, 3 - Чекає на Ваше підтвердження , 4 - Передане на оплату, 5 - Закрито",
+      },
     },
     {
       name: "products",

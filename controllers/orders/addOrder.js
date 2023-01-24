@@ -17,12 +17,16 @@ const addOrder = async (req, res) => {
     index: user.address.index,
     phone: user.address.phone,
     transfer: "Трансфер безкоштовно",
-    payment: payment,
-    status: "В роботе",
+    paymentSelect: payment.selectPay,
+    authorPay: payment.card.authorPay,
+    iban: payment.card.iban,
+    nameBank: payment.card.nameBank,
+    paypalUrl: payment.paypal.url,
+    status: "В роботі",
     statusOffer: 0,
     products: [...products],
     priceDelivery: products.reduce(
-      (accum, current) => accum + current.price,
+      (accum, current) => accum + Number(current.price),
       0
     ),
   };
@@ -32,8 +36,9 @@ const addOrder = async (req, res) => {
     data: data,
   });
 
+  console.log(result);
   await SchemeUser.findByIdAndUpdate(idUser, {
-    mySell: [...user.mySell, result],
+    mySell: [...user.mySell, { id: result.id }],
   });
 
   return res.send(result);

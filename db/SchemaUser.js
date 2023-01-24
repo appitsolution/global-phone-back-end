@@ -47,6 +47,7 @@ const userSchema = Schema({
     },
     totalPrice: {
       type: Number,
+      default: 0,
     },
   },
   payment: {
@@ -54,17 +55,25 @@ const userSchema = Schema({
       type: String,
       default: "",
     },
-    authorPay: {
-      type: String,
-      default: "",
+    card: {
+      authorPay: {
+        type: String,
+        default: "",
+      },
+      iban: {
+        type: String,
+        default: "",
+      },
+      nameBank: {
+        type: String,
+        default: "",
+      },
     },
-    iban: {
-      type: String,
-      default: "",
-    },
-    nameBank: {
-      type: String,
-      default: "",
+    paypal: {
+      url: {
+        type: String,
+        default: "",
+      },
     },
   },
   mySell: [

@@ -1,6 +1,3 @@
-import payload from "payload";
-import { generateID } from "../utils/generateID";
-
 const CollectionsPhone = {
   slug: "collections-phone",
   access: {
@@ -29,6 +26,7 @@ const CollectionsPhone = {
     {
       name: "storage",
       type: "array",
+
       required: true,
       fields: [
         {
