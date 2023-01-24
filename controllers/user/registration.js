@@ -18,6 +18,7 @@ const registration = async (req, res) => {
       lastName,
       email: email,
       password: bcrypt.hashSync(password),
+      tel: req.body?.tel,
     });
     res.status(201);
     res.send(result);
