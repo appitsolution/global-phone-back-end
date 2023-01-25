@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon",
-    "build": "yarn run install && payload build",
+    "build": "yarn install && payload build",
     "serve": "NODE_ENV=production node server.js"
 
   },
