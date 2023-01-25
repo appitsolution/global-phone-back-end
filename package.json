@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon",
-    "build": "yarn add --frozen-lockfile payload build",
+    "build": "payload build",
     "serve": "NODE_ENV=production node server.js"
   },
   "dependencies": {
