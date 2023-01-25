@@ -20,7 +20,8 @@
     "jsonwebtoken": "^9.0.0",
     "jwt": "^0.2.0",
     "mongoose": "^6.8.1",
-    "payload": "^1.4.1"
+    "payload": "^1.4.1",
+    "sharp": "^0.31.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
