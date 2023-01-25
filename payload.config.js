@@ -17,7 +17,7 @@ import ListPosts from "./collections/ListPosts";
 import BestProducts from "./collections/BestProducts";
 
 export default buildConfig({
-  serverURL: "http://localhost:3000",
+  serverURL: "https://global-phone.onrender.com:3000",
   admin: {
     user: Users.slug,
   },
