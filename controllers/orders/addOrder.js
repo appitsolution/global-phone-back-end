@@ -23,7 +23,7 @@ const addOrder = async (req, res) => {
     nameBank: payment.card.nameBank,
     paypalUrl: payment.paypal.url,
     status: "В роботі",
-    statusOffer: 0,
+    statusOffer: 1,
     products: [...products],
     priceDelivery: products.reduce(
       (accum, current) => accum + Number(current.price),
