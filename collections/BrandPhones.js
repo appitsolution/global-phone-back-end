@@ -10,22 +10,19 @@ const BrandPhones = {
   },
   fields: [
     {
-      type: "text",
       name: "id",
-      index: false,
-    },
-    {
-      name: "brandName",
+      label: "brandName",
       type: "text",
       required: true,
       // unique: true,
+      index: false,
     },
     {
       name: "brandImg",
       type: "upload",
       relationTo: "media",
       required: true,
-      unique: false,
+      index: false,
     },
   ],
 };
