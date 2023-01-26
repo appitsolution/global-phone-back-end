@@ -6,21 +6,20 @@ const BrandPhones = {
 
   admin: {
     useAsTitle: "brandName",
-    defaultColumns: ["brandName"],
+    defaultColumns: ["brandName", "id"],
   },
   fields: [
     {
       name: "brandName",
       type: "text",
       required: true,
-      unique: false,
+      // unique: true,
     },
     {
       name: "brandImg",
       type: "upload",
       relationTo: "media",
       required: true,
-      unique: false,
     },
   ],
 };
