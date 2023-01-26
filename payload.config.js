@@ -16,6 +16,8 @@ import BrandWatch from "./collections/BrandWatch";
 import ListPosts from "./collections/ListPosts";
 import BestProducts from "./collections/BestProducts";
 
+import OfferList from "./collections/OfferList";
+
 export default buildConfig({
   serverURL: "https://global-phone.onrender.com",
   admin: {
@@ -35,5 +37,6 @@ export default buildConfig({
     BrandWatch,
     ListPosts,
     BestProducts,
+    OfferList,
   ],
 });
