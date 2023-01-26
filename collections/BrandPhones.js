@@ -6,14 +6,14 @@ const BrandPhones = {
 
   admin: {
     useAsTitle: "brandName",
-    defaultColumns: ["brandName", "id"],
+    defaultColumns: ["brandName"],
   },
   fields: [
     {
       name: "brandName",
       type: "text",
       required: true,
-      // unique: true,
+      unique: false,
       index: false,
     },
     {
@@ -22,6 +22,7 @@ const BrandPhones = {
       relationTo: "media",
       required: true,
       index: false,
+      unique: false,
     },
   ],
 };
