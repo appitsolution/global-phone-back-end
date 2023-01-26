@@ -17,6 +17,7 @@ import ListPosts from "./collections/ListPosts";
 import BestProducts from "./collections/BestProducts";
 
 import OfferList from "./collections/OfferList";
+import WhyNotList from "./collections/WhyNotList";
 
 export default buildConfig({
   serverURL: "https://global-phone.onrender.com",
@@ -38,5 +39,6 @@ export default buildConfig({
     ListPosts,
     BestProducts,
     OfferList,
+    WhyNotList,
   ],
 });
