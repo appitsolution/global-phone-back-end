@@ -11,6 +11,7 @@ const CollectionsPhone = {
       name: "brand",
       type: "relationship",
       relationTo: "brand-phones",
+      index: false,
     },
     {
       name: "image",
