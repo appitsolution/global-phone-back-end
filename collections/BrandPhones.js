@@ -10,8 +10,7 @@ const BrandPhones = {
   },
   fields: [
     {
-      name: "id",
-      label: "brandName",
+      name: "brandName",
       type: "text",
       required: true,
       // unique: true,
