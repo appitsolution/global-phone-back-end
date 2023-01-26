@@ -10,6 +10,11 @@ const BrandPhones = {
   },
   fields: [
     {
+      type: "text",
+      name: "id",
+      index: false,
+    },
+    {
       name: "brandName",
       type: "text",
       required: true,
