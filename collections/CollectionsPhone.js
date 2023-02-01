@@ -36,6 +36,7 @@ const CollectionsPhone = {
         },
       ],
     },
+
     {
       name: "color",
       type: "array",
@@ -44,6 +45,20 @@ const CollectionsPhone = {
         {
           name: "color",
           type: "text",
+        },
+      ],
+    },
+    {
+      name: "batteryHidden",
+      type: "select",
+      options: [
+        {
+          label: "Не питати",
+          value: false,
+        },
+        {
+          label: "Запитувати",
+          value: true,
         },
       ],
     },
