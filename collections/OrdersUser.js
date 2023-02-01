@@ -110,30 +110,31 @@ const OrdersUser = {
         {
           name: "display",
           type: "text",
-          defaultValue: "",
+          defaultValue: " ",
           // required: true,
         },
         {
           name: "frame",
           type: "text",
-          defaultValue: "",
+          defaultValue: " ",
           // required: true,
         },
         {
           name: "tech",
           type: "text",
+          defaultValue: " ",
           // required: true,
         },
         {
           name: "battery",
           type: "text",
-          defaultValue: "",
+          defaultValue: " ",
           // required: true,
         },
         {
           name: "kits",
           type: "text",
-          defaultValue: "",
+          defaultValue: " ",
           // required: true,
         },
         {
