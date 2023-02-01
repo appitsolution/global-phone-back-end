@@ -54,11 +54,11 @@ const CollectionsPhone = {
       options: [
         {
           label: "Не питати",
-          value: false,
+          value: "false",
         },
         {
           label: "Запитувати",
-          value: true,
+          value: "true",
         },
       ],
     },
