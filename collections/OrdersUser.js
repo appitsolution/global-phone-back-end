@@ -133,8 +133,9 @@ const OrdersUser = {
         },
         {
           name: "kits",
-          type: "text",
-          defaultValue: " ",
+          type: "json",
+          defaultValue: [],
+
           // required: true,
         },
         {
