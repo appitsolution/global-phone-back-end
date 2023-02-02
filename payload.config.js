@@ -20,7 +20,7 @@ import OfferList from "./collections/OfferList";
 import WhyNotList from "./collections/WhyNotList";
 
 export default buildConfig({
-  serverURL: "http://localhost:3000",
+  serverURL: "https://global-phone.onrender.com",
   admin: {
     user: Users.slug,
   },
