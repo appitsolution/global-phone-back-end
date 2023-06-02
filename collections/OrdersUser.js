@@ -1,3 +1,7 @@
+import React from "react";
+import payload from "payload";
+import ButtonReturn from "../customField/ButtonReturn";
+
 const OrdersUser = {
   slug: "orders-user",
   auth: false,
@@ -149,6 +153,28 @@ const OrdersUser = {
       name: "priceDelivery",
       type: "number",
       required: true,
+    },
+    {
+      name: "returnStatus",
+      type: "text",
+      defaultValue: "False",
+      admin: {
+        hidden: true,
+      },
+    },
+    {
+      name: "numberInvoice",
+      type: "text",
+      defaultValue: " ",
+    },
+    {
+      name: "button",
+      type: "ui",
+      admin: {
+        components: {
+          Field: ButtonReturn,
+        },
+      },
     },
   ],
 };

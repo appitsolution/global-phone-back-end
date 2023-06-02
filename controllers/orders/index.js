@@ -1,6 +1,13 @@
 const allOrders = require("./allOrders");
-const oneOrder = require("./oneOrder");
+const updateOrderReturn = require("./updateOrderReturn");
+const updateOrderInvoice = require("./updateOrderInvoice");
 const addOrder = require("./addOrder");
 const deleteOrder = require("./deleteOrder");
 
-module.exports = { allOrders, oneOrder, addOrder, deleteOrder };
+module.exports = {
+  allOrders,
+  updateOrderReturn,
+  updateOrderInvoice,
+  addOrder,
+  deleteOrder,
+};

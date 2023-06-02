@@ -2,13 +2,15 @@ const { Router } = require("express");
 const router = Router();
 const {
   allOrders,
-  oneOrder,
+  updateOrderReturn,
   addOrder,
   deleteOrder,
+  updateOrderInvoice,
 } = require("../controllers/orders");
 
 router.get("/get", allOrders);
-router.get("/one/:id", oneOrder);
+router.post("/update-return/:id", updateOrderReturn);
+router.post("/update-invoice/:id", updateOrderInvoice);
 router.post("/add", addOrder);
 router.post("/delete", deleteOrder);
 
