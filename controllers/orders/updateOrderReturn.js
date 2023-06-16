@@ -8,7 +8,6 @@ const updateOrderReturn = async (req, res) => {
       returnStatus: "True",
     },
   });
-
-  return res.send({ status: "ok", numberInvoice: result.numberInvoice });
+  return res.json({ status: "ok", numberInvoice: result.numberInvoice });
 };
 module.exports = updateOrderReturn;
