@@ -75,12 +75,34 @@ const OrdersUser = {
     },
     {
       name: "statusOffer",
-      type: "number",
+      type: "select",
       required: true,
-      admin: {
-        description:
-          "1 - Передано в службу доставки, 2 - Прийнято на діагностику, 3 - Чекає на Ваше підтвердження , 4 - Передане на оплату, 5 - Закрито",
-      },
+      options: [
+        {
+          label: "Очікування",
+          value: "0",
+        },
+        {
+          label: "Передано в службу доставки",
+          value: "1",
+        },
+        {
+          label: "Прийнято на діагностику",
+          value: "2",
+        },
+        {
+          label: "Чекає на Ваше підтвердження",
+          value: "3",
+        },
+        {
+          label: "Передане на оплату",
+          value: "4",
+        },
+        {
+          label: "Закрито",
+          value: "5",
+        },
+      ],
     },
     {
       name: "products",

@@ -20,7 +20,7 @@ import OfferList from "./collections/OfferList";
 import WhyNotList from "./collections/WhyNotList";
 
 export default buildConfig({
-  serverURL: "https://global-phone.onrender.com",
+  serverURL: process.env.SERVER_URL,
   admin: {
     user: Users.slug,
   },

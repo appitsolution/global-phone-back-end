@@ -1,7 +1,7 @@
 const payload = require("payload");
 
 const updateOrderReturn = async (req, res) => {
-  await payload.update({
+  const result = await payload.update({
     collection: "orders-user",
     id: req.params.id,
     data: {
@@ -9,6 +9,6 @@ const updateOrderReturn = async (req, res) => {
     },
   });
 
-  return res.send("ok");
+  return res.send({ status: "ok", numberInvoice: result.numberInvoice });
 };
 module.exports = updateOrderReturn;
