@@ -33,21 +33,25 @@ const ButtonReturn = () => {
 
     console.log(result.data);
 
-    const resultDeleteOrder = await axios.delete(
-      `https://api-sandbox.dhl.com/parcel/de/transportation/pickup/v1/orders?orderID=${result.data.numberInvoice}`,
-      {
-        headers: {
-          Accept: "application/json",
-          "dhl-api-key": "FGAJK85YWwJuOoDdzvewskAGN0velKyG",
-          "Content-Type": "application/json",
-          Authorization:
-            "Basic MjIyMjIyMjIyMl9hYnJfMDgwMTpTOFBqbUxCIXMydnJ6V1Yzbw==",
-          "Access-Control-Allow-Origin": "*",
-        },
-      }
-    );
+    try {
+      const resultDeleteOrder = await axios.delete(
+        `https://api-sandbox.dhl.com/parcel/de/transportation/pickup/v1/orders?orderID=${result.data.numberInvoice}`,
+        {
+          headers: {
+            Accept: "application/json",
+            "dhl-api-key": "FGAJK85YWwJuOoDdzvewskAGN0velKyG",
+            "Content-Type": "application/json",
+            Authorization:
+              "Basic MjIyMjIyMjIyMl9hYnJfMDgwMTpTOFBqbUxCIXMydnJ6V1Yzbw==",
+            "Access-Control-Allow-Origin": "*",
+          },
+        }
+      );
 
-    console.log(resultDeleteOrder);
+      console.log(resultDeleteOrder);
+    } catch (err) {
+      console.log(err);
+    }
 
     if (result.data.status === "ok") {
       setReturnStatus(true);
