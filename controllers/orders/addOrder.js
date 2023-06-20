@@ -103,10 +103,10 @@ const addOrder = async (req, res) => {
   const createDeliveryDhl = await axios
     .request(configDeliveryDHL)
     .then((res) => {
-      // console.log(res);
+      console.log(res.response);
     })
     .catch((err) => {
-      console.log(err.data);
+      // console.log(err.data);
     });
   // console.log(createDeliveryDhl);
 
