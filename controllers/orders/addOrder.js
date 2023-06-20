@@ -47,7 +47,7 @@ const addOrder = async (req, res) => {
 
   const configDeliveryDHL = {
     method: "post",
-    url: "https://api-sandbox.dhl.com/parcel/de/shipping/v2/orders?=false",
+    url: "https://api-sandbox.dhl.com/parcel/de/transportation/pickup/v1/orders?=false",
     headers: {
       Accept: "application/json",
       "dhl-api-key": "FGAJK85YWwJuOoDdzvewskAGN0velKyG",
