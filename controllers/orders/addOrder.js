@@ -106,7 +106,7 @@ const addOrder = async (req, res) => {
       // console.log(res);
     })
     .catch((err) => {
-      console.log(err.config);
+      console.log(err.data);
     });
   // console.log(createDeliveryDhl);
 
