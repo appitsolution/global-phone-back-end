@@ -17,7 +17,7 @@ const ButtonReturn = () => {
       },
     });
     if (dataOrder.data.returnStatus === "True") {
-      // setReturnStatus(true);
+      setReturnStatus(true);
     } else {
       setReturnStatus(false);
     }
@@ -32,6 +32,7 @@ const ButtonReturn = () => {
     const id = url.match(/\/([^/]+)$/)[1];
     const result = await axios.post(`${server_url}/order/update-return/${id}`);
     console.log(result.data);
+
     if (result.data.status === "ok") {
       setReturnStatus(true);
     }

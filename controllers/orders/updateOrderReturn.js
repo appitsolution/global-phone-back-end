@@ -24,8 +24,6 @@ const updateOrderReturn = async (req, res) => {
         },
       }
     );
-
-    console.log(resultDeleteOrder);
   } catch (err) {
     console.log(err);
   }
