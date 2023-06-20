@@ -66,7 +66,7 @@ const addOrder = async (req, res) => {
         pickupAddress: {
           name1: "Deutsche Post DHL Group",
           addressStreet: user.address.house,
-          addressHouse: user.address.house,
+          addressHouse: "23",
           postalCode: user.address.index,
           city: user.address.city,
           country: "DE",
