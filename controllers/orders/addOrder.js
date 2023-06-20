@@ -45,6 +45,8 @@ const addOrder = async (req, res) => {
     data: data,
   });
 
+  console.log(formattedDate);
+
   const configDeliveryDHL = {
     method: "post",
     url: "https://api-sandbox.dhl.com/parcel/de/transportation/pickup/v1/orders?=false",
