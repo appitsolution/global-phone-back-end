@@ -31,28 +31,6 @@ const ButtonReturn = () => {
     const id = url.match(/\/([^/]+)$/)[1];
     const result = await axios.post(`${server_url}/order/update-return/${id}`);
 
-    console.log(result.data);
-
-    try {
-      const resultDeleteOrder = await axios.delete(
-        `https://api-sandbox.dhl.com/parcel/de/transportation/pickup/v1/orders?orderID=${result.data.numberInvoice}`,
-        {
-          headers: {
-            Accept: "application/json",
-            "dhl-api-key": "FGAJK85YWwJuOoDdzvewskAGN0velKyG",
-            "Content-Type": "application/json",
-            Authorization:
-              "Basic MjIyMjIyMjIyMl9hYnJfMDgwMTpTOFBqbUxCIXMydnJ6V1Yzbw==",
-            "Access-Control-Allow-Origin": "*",
-          },
-        }
-      );
-
-      console.log(resultDeleteOrder);
-    } catch (err) {
-      console.log(err);
-    }
-
     if (result.data.status === "ok") {
       setReturnStatus(true);
     }
