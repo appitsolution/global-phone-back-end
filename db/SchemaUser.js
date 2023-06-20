@@ -32,6 +32,10 @@ const userSchema = Schema({
       type: String,
       default: "",
     },
+    houseNumber: {
+      type: String,
+      default: "",
+    },
     index: {
       type: String,
       default: "",
@@ -39,15 +43,6 @@ const userSchema = Schema({
     phone: {
       type: String,
       default: "",
-    },
-  },
-  basket: {
-    basketList: {
-      type: Array,
-    },
-    totalPrice: {
-      type: Number,
-      default: 0,
     },
   },
   payment: {

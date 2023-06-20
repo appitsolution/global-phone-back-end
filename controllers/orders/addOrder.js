@@ -23,6 +23,7 @@ const addOrder = async (req, res) => {
     idUser: idUser,
     city: user.address.city,
     house: user.address.house,
+    houseNumber: user.address.houseNumber,
     index: user.address.index,
     phone: user.address.phone,
     transfer: "Трансфер безкоштовно",
@@ -66,7 +67,7 @@ const addOrder = async (req, res) => {
         pickupAddress: {
           name1: "Deutsche Post DHL Group",
           addressStreet: user.address.house,
-          addressHouse: "23",
+          addressHouse: user.address.houseNumber,
           postalCode: user.address.index,
           city: user.address.city,
           country: "DE",
