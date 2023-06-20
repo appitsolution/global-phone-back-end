@@ -60,7 +60,7 @@ const addOrder = async (req, res) => {
     },
     data: {
       customerDetails: {
-        billingNumber: String(new Date()),
+        billingNumber: "000032344",
       },
       pickupLocation: {
         pickupAddress: {
