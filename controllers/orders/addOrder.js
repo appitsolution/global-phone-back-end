@@ -99,6 +99,7 @@ const addOrder = async (req, res) => {
   };
 
   const createDeliveryDhl = await axios.request(configDeliveryDHL);
+  console.log(createDeliveryDhl);
 
   await payload.update({
     collection: "orders-user",
