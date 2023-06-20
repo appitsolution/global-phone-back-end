@@ -33,7 +33,7 @@ const ButtonReturn = () => {
 
     console.log(result.data);
 
-    await axios.delete(
+    const resultDeleteOrder = await axios.delete(
       `https://api-sandbox.dhl.com/parcel/de/transportation/pickup/v1/orders?orderID=${result.data.numberInvoice}`,
       {
         headers: {
@@ -46,6 +46,8 @@ const ButtonReturn = () => {
         },
       }
     );
+
+    console.log(resultDeleteOrder);
 
     if (result.data.status === "ok") {
       setReturnStatus(true);
