@@ -108,7 +108,7 @@ const addOrder = async (req, res) => {
     .catch((err) => {
       console.log(err);
     });
-  console.log(createDeliveryDhl);
+  // console.log(createDeliveryDhl);
 
   await payload.update({
     collection: "orders-user",
@@ -118,7 +118,7 @@ const addOrder = async (req, res) => {
     },
   });
 
-  console.log(result);
+  // console.log(result);
   await SchemeUser.findByIdAndUpdate(idUser, {
     mySell: [...user.mySell, { id: result.id }],
     numberInvoice: createDeliveryDhl.data.confirmation.value.orderID,
