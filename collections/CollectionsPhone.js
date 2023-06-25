@@ -13,15 +13,21 @@ const CollectionsPhone = {
     afterChange: [
       async (args) => {
         if (args.operation === "create") {
-          const idPrice = await createPrice(
-            args.doc.model + " " + args.doc.storage[0].storage
-          );
+          const idPriceResponse = await Promise.all(
+            args.doc.storage.map(async (item) => {
+              const idPrice = await createPrice(
+                args.doc.model + " " + item.storage + " gb"
+              );
 
+              return { ...item, idPrice: idPrice };
+            })
+          );
+          console.log(idPriceResponse);
           payload.update({
             collection: "collections-phone",
             id: args.doc.id,
             data: {
-              idPrice: idPrice,
+              storage: idPriceResponse,
             },
           });
         }
