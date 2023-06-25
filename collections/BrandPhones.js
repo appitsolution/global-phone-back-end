@@ -24,7 +24,6 @@ const BrandPhones = {
       name: "brandImg",
       type: "upload",
       relationTo: "media",
-      required: true,
     },
   ],
 };

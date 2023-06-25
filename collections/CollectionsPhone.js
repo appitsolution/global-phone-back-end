@@ -37,9 +37,17 @@ const CollectionsPhone = {
   fields: [
     {
       name: "brand",
-      type: "relationship",
-      relationTo: "brand-phones",
-      hasMany: false,
+      type: "array",
+      fields: [
+        {
+          name: "brand",
+          type: "relationship",
+          relationTo: "brand-phones",
+          required: true,
+        },
+      ],
+      maxRows: 1,
+      required: true,
     },
     {
       name: "image",

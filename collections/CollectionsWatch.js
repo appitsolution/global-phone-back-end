@@ -5,9 +5,17 @@ const CollectionsWatch = {
   },
   fields: [
     {
-      name: "brand", // required
-      type: "relationship", // required
-      relationTo: "brand-watch", // required
+      name: "brand",
+      type: "array",
+      fields: [
+        {
+          name: "brand",
+          type: "relationship",
+          relationTo: "brand-watch",
+          required: true,
+        },
+      ],
+      maxRows: 1,
       required: true,
     },
     {

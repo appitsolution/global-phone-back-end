@@ -5,9 +5,17 @@ const CollectionsTablet = {
   },
   fields: [
     {
-      name: "brand", // required
-      type: "relationship", // required
-      relationTo: "brand-tablet", // required
+      name: "brand",
+      type: "array",
+      fields: [
+        {
+          name: "brand",
+          type: "relationship",
+          relationTo: "brand-tablet",
+          required: true,
+        },
+      ],
+      maxRows: 1,
       required: true,
     },
     {
