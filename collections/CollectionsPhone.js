@@ -62,6 +62,14 @@ const CollectionsPhone = {
           name: "storage",
           type: "text",
         },
+        {
+          name: "idPrice",
+          type: "text",
+          admin: {
+            hidden: true,
+          },
+          defaultValue: " ",
+        },
       ],
     },
     {
