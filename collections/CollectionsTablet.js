@@ -44,7 +44,7 @@ const CollectionsTablet = {
       ],
     },
     {
-      name: "price",
+      name: "percent",
       type: "text",
       required: true,
     },

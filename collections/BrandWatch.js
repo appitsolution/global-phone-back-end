@@ -5,6 +5,11 @@ const BrandWatch = {
   },
   fields: [
     {
+      name: "id",
+      type: "text",
+      required: true,
+    },
+    {
       name: "brandName",
       type: "text",
       required: true,

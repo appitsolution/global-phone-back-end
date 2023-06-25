@@ -44,7 +44,7 @@ const CollectionsWatch = {
       ],
     },
     {
-      name: "price",
+      name: "percent",
       type: "text",
       required: true,
     },

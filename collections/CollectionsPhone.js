@@ -1,3 +1,6 @@
+import payload from "payload";
+import createPrice from "../utils/createPricce";
+
 const CollectionsPhone = {
   slug: "collections-phone",
   access: {
@@ -6,12 +9,31 @@ const CollectionsPhone = {
   admin: {
     useAsTitle: "model",
   },
+  hooks: {
+    afterChange: [
+      async (args) => {
+        if (args.operation === "create") {
+          const idPrice = await createPrice(
+            args.doc.model + " " + args.doc.storage[0].storage
+          );
+
+          payload.update({
+            collection: "collections-phone",
+            id: args.doc.id,
+            data: {
+              idPrice: idPrice,
+            },
+          });
+        }
+      },
+    ],
+  },
   fields: [
     {
       name: "brand",
       type: "relationship",
       relationTo: "brand-phones",
-      unique: true,
+      hasMany: false,
     },
     {
       name: "image",
@@ -63,9 +85,23 @@ const CollectionsPhone = {
       ],
     },
     {
-      name: "price",
+      name: "idPrice",
       type: "text",
-      required: true,
+      defaultValue: " ",
+      admin: {
+        hidden: true,
+      },
+    },
+    {
+      name: "percent",
+      type: "text",
+      defaultValue: "0",
+      admin: {
+        description:
+          "Якщо ви хочете додати відсоток, використовуйте " +
+          " (приклад: +10), або використовуйте " -
+          " (приклад: -10). Якщо ви не хочете змінювати відсоток, залиште це поле порожнім",
+      },
     },
   ],
 };

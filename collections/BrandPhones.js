@@ -2,6 +2,7 @@ const BrandPhones = {
   slug: "brand-phones",
   access: {
     read: () => true,
+    create: () => true,
   },
 
   admin: {
@@ -10,10 +11,14 @@ const BrandPhones = {
   },
   fields: [
     {
+      name: "id",
+      type: "text",
+      required: true,
+    },
+    {
       name: "brandName",
       type: "text",
       required: true,
-      // unique: true,
     },
     {
       name: "brandImg",
