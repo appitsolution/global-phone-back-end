@@ -11,6 +11,7 @@ mongoose.connect(process.env.MONGODB_BACK_URI).then(() => {
 });
 
 const { user, order, basket } = require("./router");
+const getPrice = require("./utils/getPrice");
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -18,6 +19,7 @@ app.use(bodyParser.json());
 app.use("/user", user);
 app.use("/order", order);
 app.use("/basket", basket);
+app.get("/getPrice", getPrice);
 
 // Redirect root to Admin panel
 app.get("/", (_, res) => {
