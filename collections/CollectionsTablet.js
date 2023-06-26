@@ -55,6 +55,13 @@ const CollectionsTablet = {
       name: "percent",
       type: "text",
       required: true,
+      label: "Загальний відсоток",
+      defaultValue: "0",
+      admin: {
+        description: `Якщо ви хочете додати відсоток, використовуйте "+",
+           (приклад: +10), або використовуйте "-"
+           (приклад: -10). Якщо ви не хочете змінювати відсоток, то не редагуйте це поле`,
+      },
     },
     {
       name: "display",
