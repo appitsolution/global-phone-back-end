@@ -481,12 +481,12 @@ const CollectionsPhone = {
         {
           name: "beautiful",
           type: "group",
-          label: "Часткова комлектція",
+          label: "Заводська упаковка",
           fields: [
             {
               name: "title",
               type: "text",
-              defaultValue: "Часткова комлектція",
+              defaultValue: "Заводська упаковка",
               admin: {
                 hidden: true,
               },
@@ -502,12 +502,12 @@ const CollectionsPhone = {
         {
           name: "average",
           type: "group",
-          label: "Відсутня",
+          label: "Зарядний кабель",
           fields: [
             {
               name: "title",
               type: "text",
-              defaultValue: "Відсутня",
+              defaultValue: "Зарядний кабель",
               admin: {
                 hidden: true,
               },
@@ -523,12 +523,54 @@ const CollectionsPhone = {
         {
           name: "bad",
           type: "group",
-          label: "Відсутній стилус",
+          label: "Навушники",
           fields: [
             {
               name: "title",
               type: "text",
-              defaultValue: "Відсутній стилус",
+              defaultValue: "Навушники",
+              admin: {
+                hidden: true,
+              },
+            },
+            {
+              name: "value",
+              type: "text",
+              defaultValue: "0",
+              label: "Значення",
+            },
+          ],
+        },
+        {
+          name: "veryBad",
+          type: "group",
+          label: "Адаптер",
+          fields: [
+            {
+              name: "title",
+              type: "text",
+              defaultValue: "Адаптер",
+              admin: {
+                hidden: true,
+              },
+            },
+            {
+              name: "value",
+              type: "text",
+              defaultValue: "0",
+              label: "Значення",
+            },
+          ],
+        },
+        {
+          name: "crazy",
+          type: "group",
+          label: "Навушники",
+          fields: [
+            {
+              name: "title",
+              type: "text",
+              defaultValue: "Навушники",
               admin: {
                 hidden: true,
               },
