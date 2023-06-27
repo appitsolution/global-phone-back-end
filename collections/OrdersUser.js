@@ -159,8 +159,15 @@ const OrdersUser = {
         },
         {
           name: "kits",
-          type: "json",
-          defaultValue: [],
+          type: "text",
+          defaultValue: " ",
+
+          // required: true,
+        },
+        {
+          name: "kitsDescription",
+          type: "text",
+          defaultValue: " ",
 
           // required: true,
         },

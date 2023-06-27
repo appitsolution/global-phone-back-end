@@ -418,12 +418,12 @@ const CollectionsTablet = {
         {
           name: "beautiful",
           type: "group",
-          label: "Заводська упаковка",
+          label: "Частковий",
           fields: [
             {
               name: "title",
               type: "text",
-              defaultValue: "Заводська упаковка",
+              defaultValue: "Частковий",
               admin: {
                 hidden: true,
               },
@@ -439,75 +439,12 @@ const CollectionsTablet = {
         {
           name: "average",
           type: "group",
-          label: "Зарядний кабель",
+          label: "Немає комплекту",
           fields: [
             {
               name: "title",
               type: "text",
-              defaultValue: "Зарядний кабель",
-              admin: {
-                hidden: true,
-              },
-            },
-            {
-              name: "value",
-              type: "text",
-              defaultValue: "0",
-              label: "Значення",
-            },
-          ],
-        },
-        {
-          name: "bad",
-          type: "group",
-          label: "Навушники",
-          fields: [
-            {
-              name: "title",
-              type: "text",
-              defaultValue: "Навушники",
-              admin: {
-                hidden: true,
-              },
-            },
-            {
-              name: "value",
-              type: "text",
-              defaultValue: "0",
-              label: "Значення",
-            },
-          ],
-        },
-        {
-          name: "veryBad",
-          type: "group",
-          label: "Адаптер",
-          fields: [
-            {
-              name: "title",
-              type: "text",
-              defaultValue: "Адаптер",
-              admin: {
-                hidden: true,
-              },
-            },
-            {
-              name: "value",
-              type: "text",
-              defaultValue: "0",
-              label: "Значення",
-            },
-          ],
-        },
-        {
-          name: "crazy",
-          type: "group",
-          label: "Навушники",
-          fields: [
-            {
-              name: "title",
-              type: "text",
-              defaultValue: "Навушники",
+              defaultValue: "Немає комплекту",
               admin: {
                 hidden: true,
               },
