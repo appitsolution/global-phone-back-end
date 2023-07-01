@@ -78,15 +78,15 @@ const OrdersUser: CollectionConfig = {
       options: [
         {
           label: "В роботі",
-          value: "В роботі",
+          value: "work",
         },
         {
           label: "Виконано",
-          value: "Виконано",
+          value: "done",
         },
         {
           label: "Скасовано",
-          value: "Скасовано",
+          value: "Cancelled",
         },
       ],
     },
