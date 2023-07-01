@@ -73,8 +73,22 @@ const OrdersUser: CollectionConfig = {
     },
     {
       name: "status",
-      type: "text",
+      type: "select",
       required: true,
+      options: [
+        {
+          label: "В роботі",
+          value: "В роботі",
+        },
+        {
+          label: "Виконано",
+          value: "Виконано",
+        },
+        {
+          label: "Скасовано",
+          value: "Скасовано",
+        },
+      ],
     },
     {
       name: "statusOffer",
