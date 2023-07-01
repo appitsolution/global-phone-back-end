@@ -86,7 +86,7 @@ const OrdersUser: CollectionConfig = {
         },
         {
           label: "Скасовано",
-          value: "Cancelled",
+          value: "cancelled",
         },
       ],
     },
