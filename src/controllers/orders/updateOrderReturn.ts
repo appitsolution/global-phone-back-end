@@ -1,9 +1,9 @@
-const payload = require("payload");
-const axios = require("axios");
+import payload from "payload";
+import axios from "axios";
 
 const updateOrderReturn = async (req, res) => {
-  const result = await payload.update({
-    collection: "orders-user",
+  const result: any = await payload.update({
+    collection: "orders-user" as never,
     id: req.params.id,
     data: {
       returnStatus: "True",

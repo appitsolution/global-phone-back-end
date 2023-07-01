@@ -1,4 +1,4 @@
-const payload = require("payload");
+import payload from "payload";
 
 const updateOrderInvoice = async (req, res) => {
   const { params, body } = req;
@@ -6,7 +6,7 @@ const updateOrderInvoice = async (req, res) => {
   console.log(params, body);
 
   await payload.update({
-    collection: "orders-user",
+    collection: "orders-user" as never,
     id: params.id,
     data: {
       numberInvoice: body.numberInvoice,

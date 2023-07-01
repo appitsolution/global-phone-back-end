@@ -1,7 +1,7 @@
-const axios = require("axios");
-const payload = require("payload");
-const SchemeUser = require("../../db/SchemaUser");
-const { default: createPrice } = require("../../utils/createPrice");
+import axios from "axios";
+import payload from "payload";
+import SchemeUser from "../../db/SchemaUser";
+// import createPrice from "../../utils/createPrice";
 // import payload from "payload";
 
 const addOrder = async (req, res) => {
@@ -33,7 +33,7 @@ const addOrder = async (req, res) => {
     iban: payment.card.iban,
     nameBank: payment.card.nameBank,
     paypalUrl: payment.paypal.url,
-    status: "В роботі",
+    status: "work",
     statusOffer: 0,
     products: [...products],
     priceDelivery: products.reduce(
@@ -42,12 +42,10 @@ const addOrder = async (req, res) => {
     ),
   };
 
-  const result = await payload.create({
-    collection: "orders-user",
+  const result: any = await payload.create({
+    collection: "orders-user" as never,
     data: data,
   });
-
-  console.log(formattedDate);
 
   const configDeliveryDHL = {
     method: "post",
@@ -107,7 +105,7 @@ const addOrder = async (req, res) => {
   console.log(createDeliveryDhl);
 
   await payload.update({
-    collection: "orders-user",
+    collection: "orders-user" as never,
     id: result.id,
     data: {
       numberInvoice: createDeliveryDhl.data.confirmation.value.orderID,
