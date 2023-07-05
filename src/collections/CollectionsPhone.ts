@@ -15,6 +15,7 @@ const CollectionsPhone: CollectionConfig = {
   },
   admin: {
     useAsTitle: "model",
+    defaultColumns: ["model"],
   },
   hooks: {
     afterChange: [

@@ -12,6 +12,10 @@ const CollectionsTablet: CollectionConfig = {
     update: isAdmin,
     delete: isAdmin,
   },
+  admin: {
+    useAsTitle: "model",
+    defaultColumns: ["model"],
+  },
   hooks: {
     afterChange: [
       async (args) => {
