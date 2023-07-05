@@ -10,6 +10,10 @@ const BrandWatch: CollectionConfig = {
     update: isAdmin,
     delete: isAdmin,
   },
+  admin: {
+    useAsTitle: "brandName",
+    defaultColumns: ["brandName", "id"],
+  },
   fields: [
     {
       name: "id",
