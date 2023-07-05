@@ -22,6 +22,9 @@ import WhyNotList from "./collections/WhyNotList";
 import AGB from "./collections/AGB";
 import Policy from "./collections/Policy";
 import Impressum from "./collections/Impressum";
+import Phones from "./collections/Phones";
+import Tablet from "./collections/Tablet";
+import Watch from "./collections/Watch";
 
 export default buildConfig({
   serverURL: process.env.SERVER_URL,
@@ -34,10 +37,13 @@ export default buildConfig({
     CompanyNews,
     Media,
     Answers,
+    Phones,
     CollectionsPhone,
     BrandPhones,
+    Tablet,
     CollectionsTablet,
     BrandTablet,
+    Watch,
     CollectionsWatch,
     BrandWatch,
     ListPosts,
