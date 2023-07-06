@@ -110,6 +110,39 @@ const CollectionsPhone: CollectionConfig = {
       name: "batteryHidden",
       type: "select",
       required: true,
+      label: "Запитувати батарею",
+      options: [
+        {
+          label: "Не питати",
+          value: "not",
+        },
+        {
+          label: "Запитувати",
+          value: "yes",
+        },
+      ],
+    },
+    {
+      name: "esimHidden",
+      type: "select",
+      required: true,
+      label: "Запитувати esim",
+      options: [
+        {
+          label: "Не питати",
+          value: "not",
+        },
+        {
+          label: "Запитувати",
+          value: "yes",
+        },
+      ],
+    },
+    {
+      name: "cpuHidden",
+      type: "select",
+      required: true,
+      label: "Запитувати процесор",
       options: [
         {
           label: "Не питати",
@@ -140,6 +173,135 @@ const CollectionsPhone: CollectionConfig = {
            (приклад: +10), або використовуйте "-"
            (приклад: -10). Якщо ви не хочете змінювати відсоток, то не редагуйте це поле`,
       },
+    },
+    {
+      name: "esim",
+      type: "group",
+      admin: {
+        description: `Якщо ви хочете додати відсоток, використовуйте "+",
+           (приклад: +10), або використовуйте "-"
+           (приклад: -10). Якщо ви не хочете змінювати відсоток, то не редагуйте це поле`,
+      },
+      label: "ESIM",
+      fields: [
+        {
+          name: "yes",
+          type: "group",
+          label: "Так",
+          fields: [
+            {
+              name: "title",
+              type: "text",
+              defaultValue: "Так",
+              admin: {
+                hidden: true,
+              },
+            },
+            {
+              name: "value",
+              type: "text",
+              defaultValue: "0",
+              label: "Значення",
+            },
+          ],
+        },
+        {
+          name: "no",
+          type: "group",
+          label: "Ні",
+          fields: [
+            {
+              name: "title",
+              type: "text",
+              defaultValue: "Ні",
+              admin: {
+                hidden: true,
+              },
+            },
+            {
+              name: "value",
+              type: "text",
+              defaultValue: "0",
+              label: "Значення",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "cpu",
+      type: "group",
+      admin: {
+        description: `Якщо ви хочете додати відсоток, використовуйте "+",
+           (приклад: +10), або використовуйте "-"
+           (приклад: -10). Якщо ви не хочете змінювати відсоток, то не редагуйте це поле`,
+      },
+      label: "Процесор",
+      fields: [
+        {
+          name: "intel",
+          type: "group",
+          label: "Інтел",
+          fields: [
+            {
+              name: "title",
+              type: "text",
+              defaultValue: "Інтел",
+              admin: {
+                hidden: true,
+              },
+            },
+            {
+              name: "value",
+              type: "text",
+              defaultValue: "0",
+              label: "Значення",
+            },
+          ],
+        },
+        {
+          name: "m1",
+          type: "group",
+          label: "М1",
+          fields: [
+            {
+              name: "title",
+              type: "text",
+              defaultValue: "М1",
+              admin: {
+                hidden: true,
+              },
+            },
+            {
+              name: "value",
+              type: "text",
+              defaultValue: "0",
+              label: "Значення",
+            },
+          ],
+        },
+        {
+          name: "M2",
+          type: "group",
+          label: "М1",
+          fields: [
+            {
+              name: "title",
+              type: "text",
+              defaultValue: "М1",
+              admin: {
+                hidden: true,
+              },
+            },
+            {
+              name: "value",
+              type: "text",
+              defaultValue: "0",
+              label: "Значення",
+            },
+          ],
+        },
+      ],
     },
     {
       name: "display",

@@ -146,6 +146,14 @@ const OrdersUser: CollectionConfig = {
           required: true,
         },
         {
+          name: "esim",
+          type: "text",
+        },
+        {
+          name: "cpu",
+          type: "text",
+        },
+        {
           name: "condition",
           type: "text",
           required: true,
