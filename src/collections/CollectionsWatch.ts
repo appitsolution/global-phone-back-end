@@ -14,7 +14,7 @@ const CollectionsWatch: CollectionConfig = {
   },
   admin: {
     useAsTitle: "model",
-    defaultColumns: ["model"],
+    defaultColumns: ["model", "year"],
   },
   hooks: {
     afterChange: [
