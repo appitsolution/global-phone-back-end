@@ -3,6 +3,7 @@ import { isAdmin } from "../access/isAdmin";
 import { isAdminOrSelf } from "../access/isAdminOrSelf";
 import createPrice from "../utils/createPrice";
 import payload from "payload";
+import axios from "axios";
 
 const CollectionsWatch: CollectionConfig = {
   slug: "collections-watch",
@@ -19,29 +20,21 @@ const CollectionsWatch: CollectionConfig = {
   hooks: {
     afterChange: [
       async (args) => {
-        if (args.operation === "create") {
-          const idPriceResponse = await Promise.all(
-            args.doc.storage.map(async (item) => {
-              const idPrice = await createPrice(
-                args.doc.model +
-                  " " +
-                  item.storage +
-                  " gb" +
-                  " " +
-                  (!item.year ? "" : item.year)
-              );
+        require("dotenv").config();
 
-              return { ...item, idPrice: idPrice };
-            })
-          );
-          console.log(idPriceResponse);
-
-          payload.update({
-            collection: "collections-tablet" as never,
+        if (args.operation === "update") {
+          axios.post(`${process.env.SERVER_URL}/order/update-product`, {
+            collection: "collections-watch",
             id: args.doc.id,
-            data: {
-              storage: idPriceResponse,
-            },
+            data: args.doc,
+          });
+        }
+
+        if (args.operation === "create") {
+          axios.post(`${process.env.SERVER_URL}/order/update-product`, {
+            collection: "collections-watch",
+            id: args.doc.id,
+            data: args.doc,
           });
         }
       },

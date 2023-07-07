@@ -4,6 +4,7 @@ import { isAdminOrSelf } from "../access/isAdminOrSelf";
 import payload from "payload";
 
 import createPrice from "../utils/createPrice";
+import axios from "axios";
 
 const CollectionsPhone: CollectionConfig = {
   slug: "collections-phone",
@@ -20,29 +21,21 @@ const CollectionsPhone: CollectionConfig = {
   hooks: {
     afterChange: [
       async (args) => {
-        if (args.operation === "create") {
-          const idPriceResponse: any = await Promise.all(
-            args.doc.storage.map(async (item) => {
-              const idPrice = await createPrice(
-                args.doc.model +
-                  " " +
-                  item.storage +
-                  " gb" +
-                  " " +
-                  (!item.year ? "" : item.year)
-              );
+        require("dotenv").config();
 
-              return { ...item, idPrice: idPrice };
-            })
-          );
-          console.log(idPriceResponse);
-          await payload.update({
-            // @ts-nocheck
-            collection: "collections-phone" as never,
+        if (args.operation === "update") {
+          axios.post(`${process.env.SERVER_URL}/order/update-product`, {
+            collection: "collections-phone",
             id: args.doc.id,
-            data: {
-              storage: idPriceResponse,
-            },
+            data: args.doc,
+          });
+        }
+
+        if (args.operation === "create") {
+          axios.post(`${process.env.SERVER_URL}/order/update-product`, {
+            collection: "collections-phone",
+            id: args.doc.id,
+            data: args.doc,
           });
         }
       },
