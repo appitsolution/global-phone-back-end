@@ -23,7 +23,7 @@ const CollectionsTablet: CollectionConfig = {
           const idPriceResponse = await Promise.all(
             args.doc.storage.map(async (item) => {
               const idPrice = await createPrice(
-                args.doc.model + " " + item.storage + " gb"
+                args.doc.model + " " + item.storage + " gb" + " " + item.year
               );
 
               return { ...item, idPrice: idPrice };
@@ -66,6 +66,10 @@ const CollectionsTablet: CollectionConfig = {
       name: "model",
       type: "text",
       required: true,
+    },
+    {
+      name: "year",
+      type: "text",
     },
     {
       name: "storage",
