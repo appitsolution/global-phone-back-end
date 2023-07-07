@@ -23,6 +23,7 @@ const Phones: CollectionConfig = {
         },
       ],
       maxRows: 1,
+      required: true
     },
     {
       name: "title",
