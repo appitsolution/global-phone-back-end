@@ -24,7 +24,12 @@ const CollectionsPhone: CollectionConfig = {
           const idPriceResponse: any = await Promise.all(
             args.doc.storage.map(async (item) => {
               const idPrice = await createPrice(
-                args.doc.model + " " + item.storage + " gb" + " " + item.year
+                args.doc.model +
+                  " " +
+                  item.storage +
+                  " gb" +
+                  " " +
+                  (!item.year ? "" : item.year)
               );
 
               return { ...item, idPrice: idPrice };
