@@ -35,13 +35,14 @@ const CollectionsTablet: CollectionConfig = {
             })
           );
           console.log(idPriceResponse);
-          payload.update({
+          const test = await payload.update({
             collection: "collections-tablet" as never,
             id: args.doc.id,
             data: {
               storage: idPriceResponse,
             },
           });
+          console.log(test);
         }
       },
     ],
@@ -84,6 +85,14 @@ const CollectionsTablet: CollectionConfig = {
         {
           name: "storage",
           type: "text",
+        },
+        {
+          name: "idPrice",
+          type: "text",
+          admin: {
+            hidden: true,
+          },
+          defaultValue: " ",
         },
       ],
     },

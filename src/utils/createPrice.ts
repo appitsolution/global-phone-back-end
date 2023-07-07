@@ -10,7 +10,7 @@ const createPrice = async (value: any) => {
     topic: "product_and_offers",
     key: "term",
     max_age: "1200",
-    max_pages: "2",
+    max_pages: "1",
     sort_by: "ranking_descending",
     condition: "any",
     shipping: "any",
