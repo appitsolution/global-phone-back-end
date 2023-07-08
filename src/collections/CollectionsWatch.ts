@@ -99,6 +99,11 @@ const CollectionsWatch: CollectionConfig = {
           type: "text",
         },
         {
+          name: "percent",
+          type: "text",
+          defaultValue: "0",
+        },
+        {
           name: "image",
           type: "upload",
           relationTo: "media",

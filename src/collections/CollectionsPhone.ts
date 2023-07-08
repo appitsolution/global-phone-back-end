@@ -101,6 +101,11 @@ const CollectionsPhone: CollectionConfig = {
           type: "text",
         },
         {
+          name: "percent",
+          type: "text",
+          defaultValue: "0",
+        },
+        {
           name: "image",
           type: "upload",
           relationTo: "media",
