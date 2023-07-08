@@ -23,7 +23,7 @@ const CollectionsWatch: CollectionConfig = {
         require("dotenv").config();
 
         if (args.operation === "update") {
-          axios.post(`${process.env.SERVER_URL}/order/update-product`, {
+          axios.post(`${process.env.SERVER_URL}/order/update-watch`, {
             collection: "collections-watch",
             id: args.doc.id,
             data: args.doc,
@@ -31,7 +31,7 @@ const CollectionsWatch: CollectionConfig = {
         }
 
         if (args.operation === "create") {
-          axios.post(`${process.env.SERVER_URL}/order/update-product`, {
+          axios.post(`${process.env.SERVER_URL}/order/update-watch`, {
             collection: "collections-watch",
             id: args.doc.id,
             data: args.doc,
@@ -71,23 +71,12 @@ const CollectionsWatch: CollectionConfig = {
       type: "text",
     },
     {
-      name: "storage",
-      type: "array",
-      required: true,
-      fields: [
-        {
-          name: "storage",
-          type: "text",
-        },
-        {
-          name: "idPrice",
-          type: "text",
-          admin: {
-            hidden: true,
-          },
-          defaultValue: " ",
-        },
-      ],
+      name: "idPrice",
+      type: "text",
+      admin: {
+        hidden: true,
+      },
+      defaultValue: " ",
     },
     {
       name: "color",

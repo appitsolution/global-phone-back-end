@@ -4,6 +4,7 @@ import updateOrderInvoice from "./updateOrderInvoice";
 import addOrder from "./addOrder";
 import deleteOrder from "./deleteOrder";
 import updateProduct from "./updateProduct";
+import updateProductWatch from "./updateProductWatch";
 
 export {
   allOrders,
@@ -12,4 +13,5 @@ export {
   addOrder,
   deleteOrder,
   updateProduct,
+  updateProductWatch,
 };
