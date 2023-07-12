@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-const server_url = "https://global-phone.onrender.com";
+const server_url = "https://global-phone-shpq.onrender.com";
 
 const ButtonReturn = () => {
   const [returnStatus, setReturnStatus] = useState(false);
